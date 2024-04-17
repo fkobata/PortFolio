@@ -26,3 +26,24 @@ navItem.forEach(item => {
         }
     })
 })
+
+
+const item = document.querySelectorAll("[data-anime]");
+const animeScrol = () => {
+    const windowTop = window.pageYOffset + window.innerHeight * 0.85;
+
+    item.forEach(Element => {
+        if (windowTop > Element.offsetTop){
+            Element.classList.add("animate");
+        }
+        else {
+            Element.classList.remove("animate")
+        }
+    });
+
+};
+animeScrol()
+
+window.addEventListener("scroll", () =>{
+    animeScrol();
+});
