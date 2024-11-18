@@ -20,8 +20,8 @@ def index():
 @app.route("/sendMail", methods=["GET","POST"])
 def sendMail():
 
-    host = "smtp.office365.com"
-    port = "587"
+    host = "smtp.hostinger.com"
+    port = "465"
     login = usuario_outlook
     senha = activit_outlook
 
